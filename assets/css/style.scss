@@ -1,0 +1,59 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+    background-color: #04293a;
+}
+
+.markdown-body {
+    max-width: 900px;
+    width: 90%;
+    font-size: 16px;
+    background-color: #28374E;
+    color: #DED7CA;
+    padding: 20px 5% !important;
+    border-radius: 8px;
+    border-color: white;
+
+}
+
+.markdown-body > :first-child{
+    color: #ffffff !important;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+.markdown-body a {
+    color: #F85E3B !important;    
+}
+
+.markdown-body p {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.markdown-body li {
+    line-height: 1.9em;
+}
+
+input.task-list-item-checkbox {
+    margin-right: 4px;
+}
+
+.markdown-body h1,h2,h3,h4,h5 {
+    color: #b2e961;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote {
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
+    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}

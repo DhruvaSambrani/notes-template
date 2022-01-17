@@ -1,0 +1,35 @@
+{
+  "editor.minimap.enabled": false,
+  "editor.wrappingIndent": "indent",
+  "editor.overviewRulerBorder": false,
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  },
+  "files.defaultLanguage": "markdown",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules": true
+  },
+  "foam.edit.linkReferenceDefinitions": "withoutExtensions",
+  "foam.openDailyNote.directory": "journal",
+  "foam.openDailyNote.titleFormat": "fullDate",
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "markdown.preview.breaks": true,
+  "pasteImage.path": "${projectRoot}/attachments",
+  "pasteImage.showFilePathConfirmInputBox": true,
+  "prettier.singleQuote": false,
+  "spellright.notificationClass": "warning",
+  "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
+  "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+  "spellright.language": [
+    "en-GB-9-0."
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+}
