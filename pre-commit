@@ -1,0 +1,2 @@
+find . -name \*.md | xargs -I {} escapehook.py {}
+git add -A
