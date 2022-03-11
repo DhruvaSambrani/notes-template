@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-import urllib.parse
 import re
 import sys
 
@@ -29,17 +28,17 @@ text = "".join(list_text)
 linkrefstart = re.search(r"\[//begin\]", text).span()[0]
 linkrefs = text[linkrefstart:].split("\n")
 print("Found", len(linkrefs)-2, "link refs")
-for i in range(1, len(linkrefs)-2):
+for i in range(1, len(linkrefs)-1):
     linkrefs[i] = linkrefs[i].replace("\\|", "|")
     titleloc = re.search('".*"', linkrefs[i]).span()
-    inhtml = re.search("\[(.*)\]", linkrefs[i]).group(1)
+    inhtml = re.search(r"\[(.*)\]", linkrefs[i]).group(1)
     if "|" in inhtml:
         newtitle = inhtml.split("|")[1]
         print("Replacing", linkrefs[i][titleloc[0]:titleloc[1]], "with", newtitle)
     else:
         newtitle = inhtml
     linkrefs[i] = linkrefs[i][:titleloc[0]]+"\""+newtitle+"\""
-    parts = re.match("\[(.*)\]:\ (.*?)\ \"(.*)\"", linkrefs[i]).groups()
+    parts = re.match(r"\[(.*)\]:\ (.*?)\ \"(.*)\"", linkrefs[i]).groups()
     linkparts = parts[0].split("|")[0].split("#")
     if len(linkparts) == 2:
         linkparts[1]=linkparts[1].replace(" ", "-").lower()
